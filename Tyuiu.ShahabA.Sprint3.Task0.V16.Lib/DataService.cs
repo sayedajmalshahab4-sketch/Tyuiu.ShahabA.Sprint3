@@ -11,8 +11,12 @@ namespace Tyuiu.ShahabA.Sprint3.Task0.V16.Lib
 
             for (int k = 1; k <= 6; k++)
             {
-                double term = Math.Pow(x / k, 3);
-                product *= term;
+                double term = x / k;
+                double cubedTerm = Math.Pow(term, 3);
+                product *= cubedTerm;
+
+               
+                Console.WriteLine($"k={k}, term={term}, cubed={cubedTerm}, product={product}");
             }
 
             return Math.Round(product, 3);
