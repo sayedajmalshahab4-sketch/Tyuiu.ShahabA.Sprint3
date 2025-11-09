@@ -11,9 +11,9 @@ namespace Tyuiu.ShahabA.Sprint3.Task0.V16.Test
         {
             DataService ds = new DataService();
             double x = 5;
-            double wait = 15625.0;
+            double wait = 10220.275;
             double result = ds.GetMultiplySeries(x);
-            Assert.AreEqual(wait, result);
+            Assert.AreEqual(wait, result, 0.001);
         }
     }
 }

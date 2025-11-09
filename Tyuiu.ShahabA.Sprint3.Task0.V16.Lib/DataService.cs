@@ -7,16 +7,13 @@ namespace Tyuiu.ShahabA.Sprint3.Task0.V16.Lib
     {
         public double GetMultiplySeries(double x)
         {
-            double product = 1;
+            double product = 1.0;
 
             for (int k = 1; k <= 6; k++)
             {
-                double term = x / k;
-                double cubedTerm = Math.Pow(term, 3);
+                double term = x / (double)k;
+                double cubedTerm = term * term * term;
                 product *= cubedTerm;
-
-               
-                Console.WriteLine($"k={k}, term={term}, cubed={cubedTerm}, product={product}");
             }
 
             return Math.Round(product, 3);
