@@ -11,9 +11,9 @@ namespace Tyuiu.ShahabA.Sprint3.Task1.V14.Test
         {
             DataService ds = new DataService();
             double t = 0.7;
-            double wait = -2.279; // Примерное ожидаемое значение
+            double wait = 7.226;
             double result = ds.GetSumSeries(t);
-            Assert.AreEqual(wait, result, 0.001);
+            Assert.AreEqual(wait, result);
         }
     }
 }
