@@ -30,7 +30,7 @@ namespace Tyuiu.ShahabA.Sprint3.Task3.V16
             Console.WriteLine($"Исходная строка: {str}");
             Console.WriteLine($"Искомый символ: {ch}");
 
-            Console.WriteLine();
+            Console.WriteLine(); 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                             *");
             Console.WriteLine("***************************************************************************");
