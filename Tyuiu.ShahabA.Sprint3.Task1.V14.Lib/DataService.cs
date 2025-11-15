@@ -2,7 +2,7 @@
 using tyuiu.cources.programming.interfaces.Sprint3;
 namespace Tyuiu.ShahabA.Sprint3.Task1.V14.Lib
 {
-    public class DataService : ISprint3Task3V14
+    public class DataService : ISprint3Task1V14
     {
         public double GetSumSeries(double t)
         {
@@ -18,6 +18,11 @@ namespace Tyuiu.ShahabA.Sprint3.Task1.V14.Lib
             }
 
             return Math.Round(sum, 3);
+        }
+
+        public double GetSumSeries(double value, int startValue, int stopValue)
+        {
+            throw new NotImplementedException();
         }
 
         public string ReplaceCharInString(string value, char replaceable, char replacement)
