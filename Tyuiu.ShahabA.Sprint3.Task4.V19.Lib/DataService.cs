@@ -2,7 +2,7 @@
 using tyuiu.cources.programming.interfaces.Sprint3;
 namespace Tyuiu.ShahabA.Sprint3.Task4.V19.Lib
 {
-    public class DataService
+    public class DataService : ISprint3Task4V19
     {
         public double Calculate(int startValue, int stopValue)
         {
