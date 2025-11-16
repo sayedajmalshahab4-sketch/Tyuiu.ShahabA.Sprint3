@@ -19,12 +19,12 @@ namespace Tyuiu.ShahabA.Sprint3.Task3.V16
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("* Используя цикл foreach подсчитать количество букв 'c' в строке:         *");
-            Console.WriteLine("* 'ice nice ice creamcc'                                                  *");
+            Console.WriteLine("* 'Ice nice Ice creamcc'                                                  *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            string str = "ice nice ice creamcc";
+            string str = "Ice nice Ice creamcc";
             char ch = 'c';
 
             Console.WriteLine($"Исходная строка: {str}");
