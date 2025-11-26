@@ -1,8 +1,7 @@
 ﻿using System;
-using System;
 using tyuiu.cources.programming.interfaces.Sprint3;
 
-namespace Tyuiu.ShahabAJ2.Sprint3.Task3.V5.Lib
+namespace Tyuiu.ShahabAJ2.Sprint3.Task3.V14.Lib
 {
     public class DataService : ISprint3Task1V14
     {
@@ -14,14 +13,14 @@ namespace Tyuiu.ShahabAJ2.Sprint3.Task3.V5.Lib
         {
             double sum = 0;
             int k = startValue;
+            double cosT = Math.Cos(value);
 
-            do
+            while (k <= stopValue)
             {
-                double term = (Math.Pow(value, k) + 1) * Math.Cos(k);
+                double term = (Math.Pow(value, k) + (1.0 / (k + 1))) * cosT;
                 sum += term;
                 k++;
             }
-            while (k <= stopValue);
 
             return Math.Round(sum, 3);
         }
