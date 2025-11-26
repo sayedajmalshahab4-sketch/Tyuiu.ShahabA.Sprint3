@@ -1,40 +1,44 @@
 ﻿using System;
-using Tyuiu.ShahabA.Sprint3.Task1.V14.Lib;
+using Tyuiu.ShahabAJ2.Sprint3.Task3.V14.Lib;
 
-namespace Tyuiu.ShahabA.Sprint3.Task1.V14
+namespace Tyuiu.ShahabAJ2.Sprint3.Task3.V14
 {
     class Program
     {
         static void Main(string[] args)
         {
-            DataService ds = new DataService();
-
-            Console.Title = "Спринт #3 | Выполнил: Шахаб А. | АСОиУБ-23-1";
+            Console.Title = "Спринт #3 | Выполнил: Шахаб А. Дж. | СМАРТб-25-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #3                                                               *");
             Console.WriteLine("* Тема: Оператор цикла while                                              *");
-            Console.WriteLine("* Задание #1                                                              *");
+            Console.WriteLine("* Задание #3                                                              *");
             Console.WriteLine("* Вариант #14                                                             *");
-            Console.WriteLine("* Выполнил: Шахаб А. | АСОиУБ-23-1                                       *");
+            Console.WriteLine("* Выполнил: Шахаб А. Дж. | СМАРТб-25-1                                    *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("* Написать программу используя цикл while, которая вычисляет сумму ряда   *");
-            Console.WriteLine("* по формуле, при t=0,7                                                   *");
+            Console.WriteLine("* по формуле, при t = 0.7:                                                *");
+            Console.WriteLine("* S = ∑[k=1 to 14] (tᵏ + 1/(k+1)) * cos(t)                               *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
             double t = 0.7;
+            int startValue = 1;
+            int stopValue = 14;
 
-            Console.WriteLine($"Значение t = {t}");
+            Console.WriteLine($"Переменная t = {t}");
+            Console.WriteLine($"Старт шага = {startValue}");
+            Console.WriteLine($"Конец шага = {stopValue}");
 
-            Console.WriteLine();
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* РЕЗУЛЬТАТ:                                                             *");
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            double result = ds.GetSumSeries(t);
-            Console.WriteLine($"Сумма ряда S = {result}");
+            DataService ds = new DataService();
+            double result = ds.GetSumSeries(t, startValue, stopValue);
+
+            Console.WriteLine($"Сумма ряда = {result}");
 
             Console.ReadKey();
         }
