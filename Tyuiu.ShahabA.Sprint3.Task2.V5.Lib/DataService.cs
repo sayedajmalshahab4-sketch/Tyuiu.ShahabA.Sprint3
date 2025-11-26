@@ -16,7 +16,9 @@ namespace Tyuiu.ShahabAJ2.Sprint3.Task3.V5.Lib
 
             do
             {
-                double term = (Math.Pow(value, k) + 1) * Math.Cos(k);
+                double aPower = Math.Pow(value, k);
+                double cosK = Math.Cos(k);
+                double term = (aPower + 1) * cosK;
                 sum += term;
                 k++;
             }
@@ -25,4 +27,4 @@ namespace Tyuiu.ShahabAJ2.Sprint3.Task3.V5.Lib
             return Math.Round(sum, 3);
         }
     }
-}}
+}
