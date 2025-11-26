@@ -1,27 +1,28 @@
 ﻿using System;
 using tyuiu.cources.programming.interfaces.Sprint3;
 
-namespace Tyuiu.ShahabA.Sprint3.Task0.V16.Lib
+namespace Tyuiu.ShahabAJ2.Sprint3.Task3.V16.Lib
 {
     public class DataService : ISprint3Task0V16
     {
-        public double GetMultiplySeries(double x)
+        public DataService()
         {
-            double product = 1.0;
-
-            for (int k = 1; k <= 6; k++)
-            {
-                double term = x / (double)k;
-                double cubedTerm = term * term * term;
-                product *= cubedTerm;
-            }
-
-            return Math.Round(product, 3);
         }
 
         public double GetMultiplySeries(int value, int startValue, int stopValue)
         {
-            throw new NotImplementedException();
+            double p = 1;
+
+            for (int k = startValue; k <= stopValue; k++)
+            {
+                double term = Math.Pow((double)value / k, 3);
+                p *= term;
+
+                // Для отладки - можно раскомментировать
+                // Console.WriteLine($"k={k}, term={term}, p={p}");
+            }
+
+            return Math.Round(p, 3);
         }
     }
 }

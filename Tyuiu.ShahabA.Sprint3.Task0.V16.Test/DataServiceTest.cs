@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Tyuiu.ShahabA.Sprint3.Task0.V16.Lib;
+using Tyuiu.ShahabAJ2.Sprint3.Task3.V16.Lib;
 
-namespace Tyuiu.ShahabA.Sprint3.Task0.V16.Test
+namespace Tyuiu.ShahabAJ2.Sprint3.Task3.V16.Test
 {
     [TestClass]
     public class DataServiceTest
@@ -10,10 +10,15 @@ namespace Tyuiu.ShahabA.Sprint3.Task0.V16.Test
         public void ValidGetMultiplySeries()
         {
             DataService ds = new DataService();
-            double x = 5;
-            double wait = 10220.275;
-            double result = ds.GetMultiplySeries(x);
-            Assert.AreEqual(wait, result, 0.001);
+
+            int value = 5;
+            int startValue = 1;
+            int stopValue = 6;
+
+            double result = ds.GetMultiplySeries(value, startValue, stopValue);
+            double wait = 10220.275; // Ожидаемое значение по тестирующей системе
+
+            Assert.AreEqual(wait, result);
         }
     }
 }
